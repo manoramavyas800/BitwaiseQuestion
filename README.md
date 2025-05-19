@@ -48,3 +48,28 @@ public class ChackPower {
 
           }
           }
+
+    //FIND THE FREQUENCY BY USING THE BITWISE OPERATOR IN WHICH TWO NUMBERS ARE COMING AT ODD TIME.
+
+    public class Frequency {
+    public static void main(String[] args) {
+        int arr[] = {3, 4, 3, 4, 5, 4, 4, 6, 7, 7};
+        int n = arr.length;
+        int res1 = 0;
+        int x = 0;
+        int res2 = 0;
+        for (int i = 0; i < n; i++) {
+            x ^= arr[i];
+        }
+        int k = x & (x - 1);
+        for (int j = 0; j < n; j++) {
+            if ((k & arr[j]) == 0) {
+                res1 = res1 ^ arr[j];
+            } else {
+                res2 = res2 ^ arr[j];
+            }
+        }
+        System.out.println(res1);
+        System.out.println(res2);
+    }
+}
