@@ -73,3 +73,23 @@ public class ChackPower {
         System.out.println(res2);
     }
 }
+
+// FIND THE FREQUENCY BY USING THE BITWISE OPERATOR IN WHICH ONE NUMBERS IS COMING AT ODD TIME.
+
+public class Codeforces {
+    public static void main(String[] args) {
+        int[] arr = {3, 4, 3, 4, 5, 4, 4, 7, 7};
+        int n = arr.length;
+        int res1 = 0;
+        int x = 0;
+           for (int j = 0; j < n; j++) {
+               if ((x & arr[j]) == 0) {
+                   res1 = res1 ^ arr[j];
+               }
+           }
+       
+        System.out.println(res1);
+
+    }
+
+}
